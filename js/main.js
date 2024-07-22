@@ -14,14 +14,18 @@ function getFetch(){
       .then(data => {
         console.log(data)
         document.querySelector('h3').innerText = data.explanation;
-        document.getElementById("photoDesc").hidden = hidden; 
+        document.getElementById("photoDesc").hidden = false; 
         if(data.media_type === 'image'){
 
-          document.getElementById("nasaImageWrap").hidden = hidden;           
+          document.getElementById("nasaImageWrap").hidden = false;         
+          document.getElementById("nasaVideoWrap").hidden = true;         
+
           document.querySelector('img').src = data.hdurl;    
-        }else if(data.media_type === 'video') {        
-  
-          document.getElementById("video").hidden = hidden;          
+        }else if(data.media_type === 'video'){        
+          document.getElementById("nasaImageWrap").hidden = true; 
+
+          document.getElementById("nasaVideoWrap").hidden = !document.getElementById("nasaVideoWrap").hidden;          
+
           document.getElementById("video").src = data.url; 
         }
       })
