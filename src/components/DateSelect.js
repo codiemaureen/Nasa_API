@@ -6,6 +6,12 @@ const DateSelect = () => {
  const [photoUrl, setPhotoUrl] = useState('')
  const [photoDesc, setPhotoDesc] = useState('')
 
+ const [selectedDate, setSelectedDate] = useState('')
+
+const handleDateChange = async(event) => {
+  setSelectedDate(event.target.value);
+}
+
 const getPhotoUrl = async() => {
   const date = document.getElementById("userDate").value;
   console.log(date);
@@ -36,7 +42,12 @@ const getPhotoDesc = async() => {
 
 return(
     <div>
-      <input type="date" id="userDate" name="" value=""></input>
+      <input
+        type="date"
+        id="userDate"
+        value={selectedDate}
+        onChange={handleDateChange} // Update state on change
+      />
       <button className="photo-button"type="button" name="button" onClick={getPhotoUrl}>Get Today's Photo</button>
       <img  className="ImageOTD" src={photoUrl} alt="photo-of-the-day" />
       <p className="photo-description">{photoDesc}</p>
