@@ -2,9 +2,9 @@ import '../style/header.css'
 
 const Header = () => {
   return (
-    <div>
+    <header>
       <h1>Nasa's Photo of the Day</h1>
-    </div>
+    </header>
   )
 }
 
