@@ -1,0 +1,8 @@
+.photo-button{
+ display: flex;
+ margin: auto;
+}
+
+.ImageOTD{
+ max-width: 50vw;
+}
