@@ -1,8 +1,22 @@
+input{
+ margin-top: 10vh;
+}
+
+
 .photo-button{
  display: flex;
  margin: auto;
 }
-
 .ImageOTD{
  max-width: 50vw;
+ max-height: 70vh;
+ margin: 10vh;
+}
+.photo-description{
+ display: flex;
+ color: white;
+ background-color: rgba(0, 0, 0, 0.69);
+ width: 30vw;
+ margin: auto;
+ margin-bottom: 10vh;
 }

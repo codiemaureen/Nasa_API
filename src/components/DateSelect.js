@@ -44,7 +44,7 @@ return(
         type="date"
         id="userDate"
         value={selectedDate}
-        onChange={handleDateChange} // Update state on change
+        onChange={handleDateChange}
       />
       <button className="photo-button"type="button" name="button" onClick={getPhotoUrl}>Get Today's Photo</button>
       {isImageVisible && (
