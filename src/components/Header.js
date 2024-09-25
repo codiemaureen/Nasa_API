@@ -1,4 +1,5 @@
 import DateSelect from "./DateSelect"
+import '../style/header.css'
 
 const Header = () => {
   return (
