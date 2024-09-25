@@ -1,17 +1,16 @@
 header{
  background-image: url('../images/header.jpg');
  background-size: 50vw;
- background-position: center;
+ background-position: 50% 40%;
  background-repeat: no-repeat;
  width: 100%;
- height: 30vh;
- /* background-attachment: scroll; */
+ height: 20vh;
 }
 
 h1{
  white-space: nowrap;
- line-height: 30vh;
- text-shadow: 5px 5px black;
+ line-height: 20vh;
+ text-shadow: 4px 3px black;
 }
 
 @media only screen and (max-width: 980px){

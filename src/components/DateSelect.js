@@ -49,6 +49,7 @@ return(
       <button className="photo-button"type="button" name="button" onClick={getPhotoUrl}>Get Today's Photo</button>
       {isImageVisible && (
       <img  className="ImageOTD" src={photoUrl} alt="photo-of-the-day" />)}
+      <p className="description-title">About This Photo</p>
       <p className="photo-description">{photoDesc}</p>
     </div>
 )
