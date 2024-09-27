@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Nasa_API/static/css/main.b61584a2.css",
-    "main.js": "/Nasa_API/static/js/main.567a26cb.js",
+    "main.css": "/Nasa_API/static/css/main.8d0d7d32.css",
+    "main.js": "/Nasa_API/static/js/main.8f5620fa.js",
     "static/js/453.ac29b384.chunk.js": "/Nasa_API/static/js/453.ac29b384.chunk.js",
     "static/media/background.jpg": "/Nasa_API/static/media/background.fef0f15be58a891ef232.jpg",
     "static/media/header.jpg": "/Nasa_API/static/media/header.34c3eb89246c643aac6e.jpg",
     "index.html": "/Nasa_API/index.html",
-    "main.b61584a2.css.map": "/Nasa_API/static/css/main.b61584a2.css.map",
-    "main.567a26cb.js.map": "/Nasa_API/static/js/main.567a26cb.js.map",
+    "main.8d0d7d32.css.map": "/Nasa_API/static/css/main.8d0d7d32.css.map",
+    "main.8f5620fa.js.map": "/Nasa_API/static/js/main.8f5620fa.js.map",
     "453.ac29b384.chunk.js.map": "/Nasa_API/static/js/453.ac29b384.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b61584a2.css",
-    "static/js/main.567a26cb.js"
+    "static/css/main.8d0d7d32.css",
+    "static/js/main.8f5620fa.js"
   ]
 }
