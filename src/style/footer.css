@@ -1,0 +1,48 @@
+footer{
+ position: fixed;
+ bottom: 0;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+}
+
+.iconCredit {
+ display: flex;
+ justify-content: center;
+ color: white;
+ white-space: nowrap;
+}
+
+.iconCredit a {
+ display: flex;
+ justify-content: center;
+ color: dark;
+ text-decoration: none;
+ padding: 0 3px;
+}
+
+.iconCredit a:hover {
+ color: red;
+ text-decoration: underline;
+}
+
+.codieCredit {
+ display: flex;
+ justify-content: center;
+ white-space: nowrap;
+}
+
+.codieCredit a {
+ text-decoration: none;
+ color: darkblue;
+}
+
+.codieCredit a:hover {
+ text-decoration: underline;
+ color: red;
+}
+
+a:visited{
+ text-decoration: none;
+ color: darkblue;
+}
