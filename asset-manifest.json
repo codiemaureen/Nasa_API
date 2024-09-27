@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Nasa_API/static/css/main.96df0a2b.css",
-    "main.js": "/Nasa_API/static/js/main.909f50e9.js",
+    "main.css": "/Nasa_API/static/css/main.e775a4e6.css",
+    "main.js": "/Nasa_API/static/js/main.1922f876.js",
     "static/js/453.ac29b384.chunk.js": "/Nasa_API/static/js/453.ac29b384.chunk.js",
     "static/media/background.jpg": "/Nasa_API/static/media/background.fef0f15be58a891ef232.jpg",
-    "static/media/header.jpg": "/Nasa_API/static/media/header.a5be5c19d783d3390081.jpg",
+    "static/media/header.jpg": "/Nasa_API/static/media/header.34c3eb89246c643aac6e.jpg",
     "index.html": "/Nasa_API/index.html",
-    "main.96df0a2b.css.map": "/Nasa_API/static/css/main.96df0a2b.css.map",
-    "main.909f50e9.js.map": "/Nasa_API/static/js/main.909f50e9.js.map",
+    "main.e775a4e6.css.map": "/Nasa_API/static/css/main.e775a4e6.css.map",
+    "main.1922f876.js.map": "/Nasa_API/static/js/main.1922f876.js.map",
     "453.ac29b384.chunk.js.map": "/Nasa_API/static/js/453.ac29b384.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96df0a2b.css",
-    "static/js/main.909f50e9.js"
+    "static/css/main.e775a4e6.css",
+    "static/js/main.1922f876.js"
   ]
 }
