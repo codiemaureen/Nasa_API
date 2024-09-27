@@ -60,6 +60,7 @@ input{
 
   .potd{
     max-width: 35vw;
+    padding: 5%;
   }
 
 }
