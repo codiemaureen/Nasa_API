@@ -41,7 +41,7 @@ const getPhotoDesc = async() => {
 return(
     <section>
       <div className="date-select">
-        <p> Select a Date to See NASA's Choice Photo Of the Day</p>
+        <p className="potd-text"> Select a Date to See NASA's Choice <span className="potd-span">Photo Of the Day</span></p>
         <input
           type="date"
           id="userDate"

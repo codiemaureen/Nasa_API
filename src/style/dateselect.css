@@ -5,6 +5,7 @@ section {
 .date-select{
   padding-top: 3vh;
   font-weight: 700;
+  font-size: 2vw;
 }
 input{
  margin: 1vh auto 0 auto;
@@ -26,6 +27,16 @@ input{
   justify-content: center;
   padding: 2%;
 }
+
+/* .potd-text{
+  display: block;
+} */
+
+.potd-span{
+  display: block;
+  white-space: nowrap;
+}
+
 .ImageOTD{
  max-width: 100%;
 }
@@ -42,28 +53,14 @@ input{
  margin: 5vh auto;
 }
 
-/* @media only screen and (max-width: 1280px) {
-  .potd {
-    max-width: 50vw;
+
+@media only screen and (max-width: 980px){
+  .date-select {
+    font-size: 4vw;
   }
-}
 
-
-@media only screen and (max-width: 920px) {
-  .potd {
-    max-width: 60vw;
+  .potd{
+    max-width: 35vw;
   }
+
 }
-
-
-@media only screen and (max-width: 480px){
- .potd{
-  padding: 2%;
- }
- .description-title{
-  font-size: 1.5rem;
- }
- .photo-description{
-   width: 80vw;
- }
-} */
