@@ -1,15 +1,33 @@
+section {
+  min-height: 70vh;
+}
+
+.date-select{
+  padding-top: 3vh;
+  font-weight: 700;
+}
 input{
  margin: 1vh auto 0 auto;
 }
-
-
 .photo-button{
- display: flex;
  margin: 1vh auto 2vh auto;
+ display: flex;
+}
+
+.potd{
+  /* border: 10px solid rgb(3, 3, 102); */
+  border-radius: 5%;
+  box-shadow: inset 0px 0px 20px 20px rgb(0, 0, 4);
+  background-color: darkgray;
+  max-width: 20vw;
+  max-height: 40vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
 }
 .ImageOTD{
- max-width: 50vw;
- max-height: 40vh;
+ max-width: 100%;
 }
 
 .description-title{
@@ -22,15 +40,30 @@ input{
  background-color: rgba(0, 0, 0, 0.69);
  width: 30vw;
  margin: 5vh auto;
+}
 
+/* @media only screen and (max-width: 1280px) {
+  .potd {
+    max-width: 50vw;
+  }
+}
+
+
+@media only screen and (max-width: 920px) {
+  .potd {
+    max-width: 60vw;
+  }
 }
 
 
 @media only screen and (max-width: 480px){
+ .potd{
+  padding: 2%;
+ }
  .description-title{
   font-size: 1.5rem;
  }
  .photo-description{
    width: 80vw;
  }
-}
+} */

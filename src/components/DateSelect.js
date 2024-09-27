@@ -39,19 +39,25 @@ const getPhotoDesc = async() => {
 }
 
 return(
-    <div>
-      <input
-        type="date"
-        id="userDate"
-        value={selectedDate}
-        onChange={handleDateChange}
-      />
-      <button className="photo-button"type="button" name="button" onClick={getPhotoUrl}>Get Today's Photo</button>
-      {isImageVisible && (
-      <img  className="ImageOTD" src={photoUrl} alt="photo-of-the-day" />)}
-      <p className="description-title">About This Photo</p>
-      <p className="photo-description">{photoDesc}</p>
-    </div>
+    <section>
+      <div className="date-select">
+        <p> Select a Date to See NASA's Choice Photo Of the Day</p>
+        <input
+          type="date"
+          id="userDate"
+          value={selectedDate}
+          onChange={handleDateChange}
+          />
+        <button className="photo-button"type="button" name="button" onClick={getPhotoUrl}>Get Today's Photo</button>
+      </div>
+
+      
+        {isImageVisible && (<div className="potd">
+        <img  className="ImageOTD" src={photoUrl} alt="photo-of-the-day" /></div>)}
+        {isImageVisible && (<p className="description-title">About This Photo</p>)}
+        <p className="photo-description">{photoDesc}</p>
+      
+    </section>
 )
 }
 
