@@ -27,6 +27,18 @@ input{
   justify-content: center;
   padding: 2%;
 }
+.votd{
+  /* border: 10px solid rgb(3, 3, 102); */
+  border-radius: 5%;
+  box-shadow: inset 0px 0px 20px 20px rgb(0, 0, 4);
+  background-color: darkgray;
+  max-width: 20vw;
+  max-height: 40vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
 
 .potd-text{
   font-size: 2vw;
@@ -40,6 +52,9 @@ input{
  max-width: 100%;
 }
 
+.videoOTD{
+  max-width: 100%;
+}
 .description-title{
  font-weight: 700;
  font-size: 2rem;
@@ -60,6 +75,10 @@ input{
 
   .potd{
     max-width: 35vw;
+    padding: 5%;
+  }
+  .votd{
+    max-width: 50vw;
     padding: 5%;
   }
 

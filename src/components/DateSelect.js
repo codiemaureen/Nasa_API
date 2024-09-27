@@ -3,7 +3,9 @@ import '../style/dateselect.css'
 
 const DateSelect = () => {
  const [isImageVisible, setIsImageVisible] = useState(false)
+ const [isVideoVisible, setIsVideoVisible] = useState(false)
  const [photoUrl, setPhotoUrl] = useState('')
+ const [videoUrl, setVideoUrl] = useState('')
  const [photoDesc, setPhotoDesc] = useState('')
 
  const [selectedDate, setSelectedDate] = useState('')
@@ -20,10 +22,12 @@ const getPhotoUrl = async() => {
       .then(data => {
         if(data.media_type === 'image'){
           setPhotoUrl(data.hdurl)  
-          setIsImageVisible(true)     
+          setIsImageVisible(true) 
+          setIsVideoVisible(false)    
         } else if(data.media_type === 'video'){
           setPhotoUrl(data.url)
-          setIsImageVisible(true)
+          setIsVideoVisible(true)
+          setIsImageVisible(false)
         }
       })
   getPhotoDesc()
@@ -53,7 +57,13 @@ return(
 
       
         {isImageVisible && (<div className="potd">
-        <img  className="ImageOTD" src={photoUrl} alt="photo-of-the-day" /></div>)}
+        <img className="ImageOTD" src={photoUrl} alt="photo-of-the-day" /></div>)}
+
+        {isVideoVisible && (<div className="votd">
+        <video className="videoOTD" controls>
+          <source src={videoUrl}  type="video/mp4">
+          </source>
+        </video></div> )}       
         {isImageVisible && (<p className="description-title">About This Photo</p>)}
         <p className="photo-description">{photoDesc}</p>
       
