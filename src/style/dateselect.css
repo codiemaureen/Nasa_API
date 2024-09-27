@@ -69,6 +69,14 @@ input{
 
 
 @media only screen and (max-width: 980px){
+
+  .votd{
+    max-width: 30vw;
+    padding: 3%;
+  }
+
+}
+@media only screen and (max-width: 480px){
   .potd-text {
     font-size: 3vw;
   }
