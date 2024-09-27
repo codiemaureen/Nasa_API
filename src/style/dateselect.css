@@ -5,7 +5,7 @@ section {
 .date-select{
   padding-top: 3vh;
   font-weight: 700;
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 input{
  margin: 1vh auto 0 auto;
@@ -28,10 +28,9 @@ input{
   padding: 2%;
 }
 
-/* .potd-text{
-  display: block;
-} */
-
+.potd-text{
+  font-size: 2vw;
+}
 .potd-span{
   display: block;
   white-space: nowrap;
@@ -55,8 +54,8 @@ input{
 
 
 @media only screen and (max-width: 980px){
-  .date-select {
-    font-size: 4vw;
+  .potd-text {
+    font-size: 3vw;
   }
 
   .potd{
