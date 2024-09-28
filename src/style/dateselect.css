@@ -63,7 +63,7 @@ input{
  display: flex;
  color: white;
  background-color: rgba(0, 0, 0, 0.69);
- width: 30vw;
+ max-width: 30vw;
  margin: 5vh auto;
 }
 
@@ -82,12 +82,17 @@ input{
   }
 
   .potd{
-    max-width: 35vw;
-    padding: 5%;
-  }
-  .votd{
-    max-width: 50vw;
+    max-width: 65vw;
     padding: 5%;
   }
 
+  .votd{
+    max-width: 65vw;
+    padding: 5%;
+  }
+
+  .photo-description {
+    max-width: 60vw;
+    margin: 5vh auto;
+  }
 }

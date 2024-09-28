@@ -64,7 +64,7 @@ return(
           <source src={videoUrl}  type="video/mp4">
           </source>
         </video></div> )}       
-        {isImageVisible && (<p className="description-title">About This Photo</p>)}
+        {(isImageVisible || isVideoVisible) &&(<p className="description-title">About This Photo</p>)}
         <p className="photo-description">{photoDesc}</p>
       
     </section>
