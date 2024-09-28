@@ -16,7 +16,6 @@ input{
 }
 
 .potd{
-  /* border: 10px solid rgb(3, 3, 102); */
   border-radius: 5%;
   position: relative;
   max-width: 50%;

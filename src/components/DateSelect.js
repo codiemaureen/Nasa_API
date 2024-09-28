@@ -5,7 +5,7 @@ const DateSelect = () => {
  const [isImageVisible, setIsImageVisible] = useState(false)
  const [isVideoVisible, setIsVideoVisible] = useState(false)
  const [photoUrl, setPhotoUrl] = useState('')
- const [videoUrl, setVideoUrl] = useState('')
+ const [videoUrl, setVideoUrl] = useState("")
  const [photoDesc, setPhotoDesc] = useState('')
 
  const [selectedDate, setSelectedDate] = useState('')
@@ -25,9 +25,10 @@ const getPhotoUrl = async() => {
           setIsImageVisible(true) 
           setIsVideoVisible(false)    
         } else if(data.media_type === 'video'){
-          setPhotoUrl(data.url)
-          setIsVideoVisible(true)
+          console.log(data.url)
+          setVideoUrl(data.url)
           setIsImageVisible(false)
+          setIsVideoVisible(true)
         }
       })
   getPhotoDesc()
@@ -60,10 +61,8 @@ return(
         <img className="ImageOTD" src={photoUrl} alt="photo-of-the-day" /></div>)}
 
         {isVideoVisible && (<div className="votd">
-        <video className="videoOTD" controls>
-          <source src={videoUrl}  type="video/mp4">
-          </source>
-        </video></div> )}       
+        <iframe src={videoUrl}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" className="videoOTD" ></iframe></div> )}       
         {(isImageVisible || isVideoVisible) &&(<p className="description-title">About This Photo</p>)}
         <p className="photo-description">{photoDesc}</p>
       
