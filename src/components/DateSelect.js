@@ -1,8 +1,6 @@
 import { useState } from "react";
 import '../style/dateselect.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-
+import Spinner from "./Spinner";
 
 const DateSelect = () => {
  const [isLoading, setIsLoading] = useState(false);
@@ -64,7 +62,7 @@ return(
           />
         <button className="photo-button"type="button" name="button" onClick={getPhotoUrl}>Get Today's Photo</button>
       </div>
-        {isLoading && (<FontAwesomeIcon icon={faSpinner} spinPulse/>)}
+        {isLoading && (<Spinner />)}
         {isImageVisible && (<div className="potd">
         <img className="ImageOTD" src={photoUrl} alt="photo-of-the-day"/></div>)}
 
