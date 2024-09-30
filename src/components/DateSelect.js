@@ -31,7 +31,6 @@ const getPhotoUrl = async() => {
           setIsVideoVisible(false)    
         } else if(data.media_type === 'video'){
           setIsLoading(false)
-          console.log(data.url)
           setVideoUrl(data.url)
           setIsImageVisible(false)
           setIsVideoVisible(true)
@@ -39,6 +38,7 @@ const getPhotoUrl = async() => {
       })
   getPhotoDesc()
 }
+
 
 const getPhotoDesc = async() => {
     const url = `https://api.nasa.gov/planetary/apod?api_key=cW3MjyR23t5ybWlIRARhHdvE0pohUf0SXUO1gYuM&date=${selectedDate}`
