@@ -1,13 +1,16 @@
 import { useState } from "react";
 import '../style/dateselect.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+
 
 const DateSelect = () => {
+ const [isLoading, setIsLoading] = useState(false);
  const [isImageVisible, setIsImageVisible] = useState(false)
  const [isVideoVisible, setIsVideoVisible] = useState(false)
  const [photoUrl, setPhotoUrl] = useState('')
  const [videoUrl, setVideoUrl] = useState("")
  const [photoDesc, setPhotoDesc] = useState('')
-
  const [selectedDate, setSelectedDate] = useState('')
 
 const handleDateChange = async(event) => {
@@ -15,16 +18,21 @@ const handleDateChange = async(event) => {
 }
 
 const getPhotoUrl = async() => {
+  setIsLoading(true);
+  setIsImageVisible(false) 
+  setIsVideoVisible(false)   
   const url = `https://api.nasa.gov/planetary/apod?api_key=cW3MjyR23t5ybWlIRARhHdvE0pohUf0SXUO1gYuM&date=${selectedDate}`
-
   await fetch(url)
-      .then(res => res.json()) // parse response as JSON
+      .then(res => 
+        res.json()) // parse response as JSON
       .then(data => {
         if(data.media_type === 'image'){
+          setIsLoading(false)
           setPhotoUrl(data.hdurl)  
           setIsImageVisible(true) 
           setIsVideoVisible(false)    
         } else if(data.media_type === 'video'){
+          setIsLoading(false)
           console.log(data.url)
           setVideoUrl(data.url)
           setIsImageVisible(false)
@@ -47,6 +55,7 @@ return(
     <section>
       <div className="date-select">
         <p className="potd-text"> Select a Date to See NASA's Choice <span className="potd-span">Photo Of The Day</span></p>
+        
         <input
           type="date"
           id="userDate"
@@ -55,14 +64,14 @@ return(
           />
         <button className="photo-button"type="button" name="button" onClick={getPhotoUrl}>Get Today's Photo</button>
       </div>
-
-      
+        {isLoading && (<FontAwesomeIcon icon={faSpinner} spinPulse/>)}
         {isImageVisible && (<div className="potd">
-        <img className="ImageOTD" src={photoUrl} alt="photo-of-the-day" /></div>)}
+        <img className="ImageOTD" src={photoUrl} alt="photo-of-the-day"/></div>)}
 
         {isVideoVisible && (<div className="votd">
         <iframe src={videoUrl}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" className="videoOTD" ></iframe></div> )}       
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        className="videoOTD" ></iframe></div> )}       
         {(isImageVisible || isVideoVisible) &&(<p className="description-title">About This Photo</p>)}
         <p className="photo-description">{photoDesc}</p>
       
