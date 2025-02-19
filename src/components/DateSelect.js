@@ -6,10 +6,10 @@ const DateSelect = () => {
  const [isLoading, setIsLoading] = useState(false);
  const [isImageVisible, setIsImageVisible] = useState(false)
  const [isVideoVisible, setIsVideoVisible] = useState(false)
- const [photoUrl, setPhotoUrl] = useState('')
+ const [photoUrl, setPhotoUrl] = useState("")
  const [videoUrl, setVideoUrl] = useState("")
- const [photoDesc, setPhotoDesc] = useState('')
- const [selectedDate, setSelectedDate] = useState('')
+ const [photoDesc, setPhotoDesc] = useState("")
+ const [selectedDate, setSelectedDate] = useState("")
 
 const handleDateChange = async(event) => {
   setSelectedDate(event.target.value);
@@ -23,6 +23,7 @@ const getPhotoUrl = async() => {
   await fetch(url)
       .then(res => 
         res.json()) // parse response as JSON
+
       .then(data => {
         if(data.media_type === 'image'){
           setIsLoading(false)
