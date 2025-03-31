@@ -82,7 +82,6 @@ return(
       <div>
         {(isImageVisible || isVideoVisible) && 
           (<div className="descriptionContainer">
-          
           <p className="description-title">Learn More About This Image!</p>
           <p className="photo-description">{photoDesc}</p></div>)}
       </div>
