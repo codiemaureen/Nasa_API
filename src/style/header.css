@@ -1,9 +1,8 @@
 header{
  background-image: url('../images/header.jpg');
- background-size: 50vw;
+ background-size: 100%;
  background-position: 50% 40%;
  background-repeat: no-repeat;
- width: 100%;
  height: 20vh;
 }
 
