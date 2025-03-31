@@ -4,6 +4,8 @@ header{
  background-position: 50% 40%;
  background-repeat: no-repeat;
  height: 20vh;
+ position: fixed;
+ width: 100vw;
 }
 
 h1{

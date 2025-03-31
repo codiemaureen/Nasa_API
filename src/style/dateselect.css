@@ -1,7 +1,7 @@
 .potdContainer {
   min-height: 100vh;
   display: flex;
-  padding-top: 5%;
+  padding-top: 30vh;
   justify-content: space-around;
 }
 
