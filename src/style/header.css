@@ -6,6 +6,7 @@ header{
  height: 20vh;
  position: fixed;
  width: 100vw;
+ z-index: 3000;
 }
 
 h1{
