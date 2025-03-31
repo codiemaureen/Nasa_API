@@ -51,9 +51,9 @@ const getPhotoDesc = async() => {
 }
 
 return(
-    <section>
+    <section className="potdContainer">
       <div className="date-select">
-        <p className="potd-text"> Select a Date to See NASA's Choice <span className="potd-span">Photo Of The Day</span></p>
+        <p className="potd-text"> Select a Date to See NASA's Choice <span className="potd-span">Image Of The Day</span></p>
         
         <input
           type="date"
@@ -61,19 +61,31 @@ return(
           value={selectedDate}
           onChange={handleDateChange}
           />
-        <button className="photo-button"type="button" name="button" onClick={getPhotoUrl}>Get Today's Photo</button>
-      </div>
+        <button 
+          className="photo-button"
+          type="button" 
+          name="button" 
+          onClick={getPhotoUrl}>Get Today's Image
+        </button>
         {isLoading && (<Spinner />)}
         {isImageVisible && (<div className="potd">
         <img className="ImageOTD" src={photoUrl} alt="photo-of-the-day"/></div>)}
 
         {isVideoVisible && (<div className="votd">
-        <iframe src={videoUrl}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        className="videoOTD" ></iframe></div> )}       
-        {(isImageVisible || isVideoVisible) &&(<p className="description-title">About This Photo</p>)}
-        <p className="photo-description">{photoDesc}</p>
-      
+        <iframe 
+          src={videoUrl}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          className="videoOTD" >
+        </iframe></div> )}
+      </div>
+
+      <div>
+        {(isImageVisible || isVideoVisible) && 
+          (<div className="descriptionContainer">
+          
+          <p className="description-title">Learn More About This Image!</p>
+          <p className="photo-description">{photoDesc}</p></div>)}
+      </div>
     </section>
 )
 }
