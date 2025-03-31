@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import '../style/dateselect.css'
 import Spinner from "./Spinner";
 
-const DateSelect = () => {
- const [isLoading, setIsLoading] = useState(false);
- const [isImageVisible, setIsImageVisible] = useState(false)
- const [isVideoVisible, setIsVideoVisible] = useState(false)
- const [photoUrl, setPhotoUrl] = useState("")
- const [videoUrl, setVideoUrl] = useState("")
- const [photoDesc, setPhotoDesc] = useState("")
- const [selectedDate, setSelectedDate] = useState("")
+  const DateSelect = () => {
+    const today = new Date();
+
+    const day = today.getDate();
+    const month = (today.getMonth() + 1).toString().padStart(2, "0"); // Month is 0-indexed
+    const year = today.getFullYear();
+    const customFormattedDate = `${year}-${month}-${day}`;
+    console.log(customFormattedDate);
+    const [isLoading, setIsLoading] = useState(false);
+    const [isImageVisible, setIsImageVisible] = useState(false);
+    const [isVideoVisible, setIsVideoVisible] = useState(false);
+    const [photoUrl, setPhotoUrl] = useState("");
+    const [videoUrl, setVideoUrl] = useState("");
+    const [photoDesc, setPhotoDesc] = useState("");
+    const [selectedDate, setSelectedDate] = useState(customFormattedDate);
 
 const handleDateChange = async(event) => {
   setSelectedDate(event.target.value);
@@ -40,6 +47,9 @@ const getPhotoUrl = async() => {
   getPhotoDesc()
 }
 
+useEffect(() => {
+  getPhotoUrl();
+}, []);
 
 const getPhotoDesc = async() => {
     const url = `https://api.nasa.gov/planetary/apod?api_key=cW3MjyR23t5ybWlIRARhHdvE0pohUf0SXUO1gYuM&date=${selectedDate}`
@@ -49,6 +59,8 @@ const getPhotoDesc = async() => {
         setPhotoDesc(data.explanation)
     })
 }
+
+
 
 return(
     <section className="potdContainer">
