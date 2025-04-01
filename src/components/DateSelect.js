@@ -77,7 +77,7 @@ return(
           className="photo-button"
           type="button" 
           name="button" 
-          onClick={getPhotoUrl}>Get Today's Image
+          onClick={getPhotoUrl}>See the Photo of the Day!
         </button>
         {isLoading && (<Spinner />)}
         {isImageVisible && (<div className="potd">
