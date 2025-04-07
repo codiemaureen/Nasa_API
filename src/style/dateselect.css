@@ -100,7 +100,6 @@
     font-size: 80%;
   }
   .potdContainer{
-    border: 2px solid gray;
     max-width: 100vw;
     flex-direction: column;
     align-items: center;
@@ -111,7 +110,9 @@
     box-shadow: -5px -3px 10px white,
       5px 3px 10px white;
     position: relative;
-    height: 60vh;
+    min-width: none;
+    min-height: 30vh;
+    max-height: 60vh;
     width: 100%;
     overflow: hidden;
   }
@@ -123,7 +124,8 @@
     box-shadow: -5px -3px 10px white,
       5px 3px 10px white;
     position: relative;
-    height: 50vh;
+    min-height: 30vh;
+    max-height: 60vh;
     width: 100%;
     overflow: hidden;
   }
