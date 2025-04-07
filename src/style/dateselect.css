@@ -8,7 +8,9 @@
 .date-select{
   font-weight: 700;
   font-size: 1.5vw;
-  max-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .photo-button{
@@ -19,11 +21,12 @@
 .potd{
   border: 15px solid black;
   background-color: white;
-  box-shadow: -5px -3px 10px white,
-  5px 3px 10px white;
+  box-shadow: -3px -3px 10px white,
+  3px 3px 10px white;
   position: relative;
-  min-width: 30vw;
-  height: 60%;
+  aspect-ratio: 16 / 16;
+  width: 100%;
+  /* height: 50vh; */
   overflow: hidden;
 }
 .votd{
@@ -32,8 +35,8 @@
   box-shadow: -5px -3px 10px white,
   5px 3px 10px white;
   position: relative;
-  width: 30vw;
-  height: 60%;
+  aspect-ratio: 16 / 16;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -93,6 +96,9 @@
 
 
 @media only screen and (max-width: 980px){
+  .date-select{
+    width: 100vw;
+  }
   .potd-text {
     font-size: 1rem;
   }
@@ -103,6 +109,7 @@
     max-width: 100vw;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   .potd {
     border: 15px solid black;
@@ -110,23 +117,19 @@
     box-shadow: -5px -3px 10px white,
       5px 3px 10px white;
     position: relative;
-    min-width: none;
-    min-height: 30vh;
-    max-height: 60vh;
-    width: 100%;
+    aspect-ratio: 16 / 16;
+    width: 80%;
     overflow: hidden;
   }
 
   .votd {
-    margin-top: 15%;
     border: 15px solid black;
     background-color: white;
-    box-shadow: -5px -3px 10px white,
+    box-shadow: -5px -3px 20px white,
       5px 3px 10px white;
     position: relative;
-    min-height: 30vh;
-    max-height: 60vh;
-    width: 100%;
+    aspect-ratio: 16 / 16;
+    width: 80%;
     overflow: hidden;
   }
   .descriptionContainer{
