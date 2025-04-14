@@ -91,10 +91,10 @@ return(
         </iframe></div> )}
       </div>
 
-      <div>
+      <div className="descriptionContainer">
         {(isImageVisible || isVideoVisible) && 
-          (<div className="descriptionContainer">
-          <p className="description-title">Learn More About This Image!</p>
+          (<div className="descriptionWrapper">
+          <p className="descriptionTitle">Learn More About This Image!</p>
           <p className="photo-description">{photoDesc}</p></div>)}
       </div>
     </section>
