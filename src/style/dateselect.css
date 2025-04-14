@@ -96,6 +96,7 @@
   margin-top: 10vh;
   overflow: scroll;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 .descriptionTitle{
