@@ -124,7 +124,7 @@
     background-color: white;
     position: relative;
     aspect-ratio: 16 / 16;
-    max-height: 40vh;
+    width: 55vw;
     overflow: hidden;
   }
 
@@ -135,13 +135,13 @@
       5px 3px 10px white;
     position: relative;
     aspect-ratio: 16 / 16;
-    max-width: 70%;
+    width: 55vw;
     overflow: hidden;
   }
   .descriptionWrapper{
     margin-bottom: 20vh;
     height: 60vh;
-    max-width: 75vw;
-    aspect-ratio: 12/16;
+    width: 50vw;
+    aspect-ratio: 16/16;
   }
 }
