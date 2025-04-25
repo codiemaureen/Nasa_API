@@ -92,9 +92,9 @@ return(
       </div>
 
       <div className="descriptionContainer">
+        <p className="descriptionTitle">Learn More About This Image!</p>
         {(isImageVisible || isVideoVisible) && 
           (<div className="descriptionWrapper">
-          <p className="descriptionTitle">Learn More About This Image!</p>
           <p className="photo-description">{photoDesc}</p></div>)}
       </div>
     </section>
