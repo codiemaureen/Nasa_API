@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import '../style/dateselect.css'
 import Spinner from "./Spinner";
 
+
   const DateSelect = () => {
     const today = new Date();
 
@@ -26,7 +27,7 @@ const getPhotoUrl = async() => {
   setIsLoading(true);
   setIsImageVisible(false) 
   setIsVideoVisible(false)   
-  const url = `https://api.nasa.gov/planetary/apod?api_key=cW3MjyR23t5ybWlIRARhHdvE0pohUf0SXUO1gYuM&date=${selectedDate}`
+  const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_KEY}&date=${selectedDate}`
   await fetch(url)
       .then(res => 
         res.json()) // parse response as JSON
@@ -52,7 +53,7 @@ useEffect(() => {
 }, []);
 
 const getPhotoDesc = async() => {
-    const url = `https://api.nasa.gov/planetary/apod?api_key=cW3MjyR23t5ybWlIRARhHdvE0pohUf0SXUO1gYuM&date=${selectedDate}`
+    const url = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_KEY}&date=${selectedDate}`
     await fetch (url)
       .then(res => res.json())
       .then(data => {
