@@ -6,7 +6,7 @@ import Spinner from "./Spinner";
   const DateSelect = () => {
     const today = new Date();
 
-    const day = today.getDate();
+    const day = (today.getDate() + 1).toString().padStart(2, "0");
     const month = (today.getMonth() + 1).toString().padStart(2, "0"); // Month is 0-indexed
     const year = today.getFullYear();
     const customFormattedDate = `${year}-${month}-${day}`;
